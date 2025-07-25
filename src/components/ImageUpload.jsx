@@ -1,7 +1,5 @@
-import React from "react";
-
-const ImageUploader = ({ onImageLoad }) => {
-    const handleFileChange = (e) => {
+function ImageUpload({ onImageLoad }) {
+    const handleChange = (e) => {
         const file = e.target.files[0];
         if (!file) return;
 
@@ -12,9 +10,9 @@ const ImageUploader = ({ onImageLoad }) => {
 
     return (
         <div>
-            <input type="file" accept="image/*" onChange={handleFileChange} />
+            <input type="file" accept="image/*" onChange={handleChange} />
         </div>
     );
-};
+}
 
-export default ImageUploader;
+export default ImageUpload;
